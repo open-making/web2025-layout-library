@@ -12,7 +12,7 @@ Do's:
 - Submit an image with 3-4 elements like in the image example above. 
 - Label your plots of area such as "menu", "sidebar", "main content". 
 - Post only up to 1-2 images, one image for each page. 
-- Go through the 'Issues' page to see if someone has already requested a layout **similar to yours**. If that is the case, **then only reacting to that issue comment is enough**, think of it like a `+1` on Whatsapp. 
+- Go through the '[Issues](https://github.com/open-making/web2025-layout-library/issues)' page to see if someone has already requested a layout **similar to yours**. If that is the case, **then only reacting to that issue comment is enough**, think of it like a `+1` on Whatsapp. 
 - Try to think about what your layout looks like at the lowest, most minimum level.
 - Try to adapt an existing layout to your design.
 
@@ -22,3 +22,10 @@ Don't's:
 - Do not be disappointed when asked to adapt an existing layout.
 
 ![alt text](image-1.png)
+
+## How to Submit
+
+Head over to [issues](https://github.com/open-making/web2025-layout-library/issues/1) to add a new request.
+
+**In the issue comment, describe your layout and attach a minimal, labelled image of your layout.**
+
