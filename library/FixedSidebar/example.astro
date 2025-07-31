@@ -1,0 +1,20 @@
+---
+import FixedSidebarLayout from './FixedSidebarLayout.astro';
+---
+
+<FixedSidebarLayout title="Fixed Sidebar Example">
+	<h1>Main Content</h1>
+	<p>This is the main content area. The sidebar remains fixed when you scroll.</p>
+
+	<div class="tall">
+		<p>Scroll down to see the fixed sidebar in action...</p>
+		<p>The sidebar stays fixed even when scrolling through long content.</p>
+		<p>Bottom of content area.</p>
+	</div>
+</FixedSidebarLayout>
+
+<style>
+	.tall {
+		min-height: 400vh;
+	}
+</style>

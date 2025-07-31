@@ -1,0 +1,79 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="My website description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: system-ui, sans-serif;
+			}
+
+			.layout {
+				display: flex;
+				min-height: 100vh;
+			}
+
+			.sidebar {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 100vh;
+				background: #f5f5f5;
+				padding: 20px;
+				overflow-y: auto;
+				border-right: 1px solid #e0e0e0;
+			}
+
+			.main-content {
+				margin-left: 200px;
+				flex: 1;
+				padding: 40px;
+			}
+
+			.logo {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 30px;
+			}
+
+			.menu {
+				font-size: 18px;
+				margin-bottom: 20px;
+				color: #333;
+			}
+
+			.socials {
+				position: absolute;
+				bottom: 20px;
+				font-size: 18px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<aside class="sidebar">
+				<div class="logo">Logo</div>
+				<div class="menu">Menu Content</div>
+				<div class="socials">Socials</div>
+			</aside>
+			<main class="main-content">
+				<slot />
+			</main>
+		</div>
+	</body>
+</html>
