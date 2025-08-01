@@ -1,0 +1,75 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="My website description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: system-ui, sans-serif;
+				min-height: 100vh;
+			}
+
+			.layout {
+				display: flex;
+				min-height: 100vh;
+			}
+
+			.left-content {
+				flex: 1;
+				padding: 60px;
+				background: white;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.right-content {
+				flex: 1;
+				background: #f8f9fa;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 60px;
+			}
+
+			@media (max-width: 768px) {
+				.layout {
+					flex-direction: column;
+				}
+				
+				.left-content,
+				.right-content {
+					padding: 40px 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="left-content">
+				<slot name="left">
+					<h1>Left Content</h1>
+					<p>This is the left side content area.</p>
+				</slot>
+			</div>
+			<div class="right-content">
+				<slot name="right">
+					<p>Right Content</p>
+				</slot>
+			</div>
+		</div>
+	</body>
+</html>

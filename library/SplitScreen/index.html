@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Split Screen Layout</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+			min-height: 100vh;
+		}
+
+		.layout {
+			display: flex;
+			min-height: 100vh;
+		}
+
+		.left-content {
+			flex: 1;
+			padding: 60px;
+			background: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #333;
+			font-size: 24px;
+		}
+
+		.right-content {
+			flex: 1;
+			background: #f8f9fa;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 60px;
+			color: #333;
+			font-size: 24px;
+			border-left: 1px solid #e9ecef;
+		}
+
+		@media (max-width: 768px) {
+			.layout {
+				flex-direction: column;
+			}
+			
+			.left-content,
+			.right-content {
+				padding: 40px 20px;
+			}
+			
+			.right-content {
+				border-left: none;
+				border-top: 1px solid #e9ecef;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<div class="left-content">
+			Left Content
+		</div>
+		<div class="right-content">
+			Right Content
+		</div>
+	</div>
+</body>
+</html>
