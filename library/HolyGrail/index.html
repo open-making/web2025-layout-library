@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Holy Grail Layout</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.header {
+			background: #333;
+			color: white;
+			padding: 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.logo {
+			font-size: 24px;
+			font-weight: bold;
+		}
+
+		.menu {
+			font-size: 18px;
+		}
+
+		.main-wrapper {
+			flex: 1;
+			display: flex;
+			background: #f5f5f5;
+			gap: 20px;
+			padding: 20px;
+		}
+
+		.content-area {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.title-section {
+			background: #333;
+			color: white;
+			padding: 40px;
+			text-align: center;
+		}
+
+		.title-section h1 {
+			font-size: 32px;
+			font-weight: normal;
+		}
+
+		.main-content {
+			background: #333;
+			color: white;
+			padding: 40px;
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+		}
+
+		.right-section {
+			width: 300px;
+			background: #999;
+			color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+		}
+
+		.sub-content {
+			background: #333;
+			color: white;
+			padding: 60px;
+			text-align: center;
+			font-size: 24px;
+		}
+
+		.footer {
+			background: #333;
+			color: white;
+			padding: 30px;
+			text-align: center;
+			font-size: 24px;
+			border-top: 3px solid #f5f5f5;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			margin: 0 10px;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">Logo</div>
+		<nav class="menu">
+			<a href="#home">Home</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+		</nav>
+	</header>
+
+	<div class="main-wrapper">
+		<div class="content-area">
+			<section class="title-section">
+				<h1>Title</h1>
+			</section>
+			<main class="main-content">
+				Main Content
+			</main>
+		</div>
+		<aside class="right-section">
+			Right Section
+		</aside>
+	</div>
+
+	<section class="sub-content">
+		Sub-Content
+	</section>
+
+	<footer class="footer">
+		Footer
+	</footer>
+</body>
+</html>

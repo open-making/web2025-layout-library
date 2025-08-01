@@ -1,0 +1,41 @@
+---
+import HolyGrailLayout from './HolyGrailLayout.astro';
+---
+
+<HolyGrailLayout title="Holy Grail Layout Example">
+	<div slot="logo">My Logo</div>
+	<nav slot="menu">
+		<a href="#home">Home</a> | <a href="#about">About</a> | <a href="#contact">Contact</a>
+	</nav>
+	<div slot="title">
+		<h1>Welcome to My Site</h1>
+		<p>This is the title section</p>
+	</div>
+	<div slot="main">
+		<h2>Main Content Area</h2>
+		<p>This is where your primary content goes. It expands to fill the available space.</p>
+		<p>The layout adapts to different content lengths while maintaining the overall structure.</p>
+	</div>
+	<div slot="aside">
+		<h3>Right Section</h3>
+		<p>This could be an image, sidebar content, or any other complementary information.</p>
+	</div>
+	<div slot="sub-content">
+		<h2>Sub-Content Section</h2>
+		<p>This section spans the full width below the main content area.</p>
+		<p>Perfect for additional information, testimonials, or related content.</p>
+	</div>
+	<div slot="footer">
+		<p>&copy; 2025 My Website. All rights reserved.</p>
+	</div>
+</HolyGrailLayout>
+
+<style>
+	nav a {
+		color: white;
+		text-decoration: none;
+	}
+	nav a:hover {
+		text-decoration: underline;
+	}
+</style>
