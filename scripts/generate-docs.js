@@ -33,7 +33,7 @@ async function takeScreenshot(htmlPath, outputPath) {
 
     await page.screenshot({
       path: outputPath,
-      fullPage: true
+      fullPage: false
     });
 
   } catch (error) {
@@ -50,6 +50,32 @@ function createMinimalReadme(patternName, imageName) {
   return `# ${patternName}
 
 ![${patternName} Layout](${imageName})
+`;
+}
+
+function createLibraryReadme(patterns) {
+  const tableRows = patterns.map(pattern => {
+    const imagePath = `${pattern}/screenshot.png`;
+    return `| ${pattern} | <img src="${imagePath}" alt="${pattern}" height="300"> |`;
+  }).join('\n');
+
+  return `# Layout Library
+
+A collection of responsive layout patterns and components.
+
+## Available Layouts
+
+| Layout | Preview |
+|--------|---------|
+${tableRows}
+
+## Usage
+
+Each layout directory contains:
+- \`index.html\` - Standalone demo
+- \`*.astro\` - Astro component implementation
+- \`example.astro\` - Usage example
+- \`screenshot.png\` - Visual preview
 `;
 }
 
@@ -116,6 +142,13 @@ async function main() {
       // Small delay between patterns
       await new Promise(resolve => setTimeout(resolve, 500));
     }
+
+    // Create library-wide README
+    console.log('\nCreating library README...');
+    const libraryReadmePath = path.join(LIBRARY_DIR, 'README.md');
+    const libraryReadmeContent = createLibraryReadme(patterns);
+    fs.writeFileSync(libraryReadmePath, libraryReadmeContent);
+    console.log('✓ Library README created');
   }
 
   console.log('\nDone!');
