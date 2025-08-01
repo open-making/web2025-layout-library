@@ -14,60 +14,70 @@
 		body {
 			font-family: system-ui, sans-serif;
 			background: white;
-			padding: 40px;
+			padding: 40px 20px;
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
 		}
 
 		.header {
 			text-align: center;
-			margin-bottom: 40px;
-		}
-
-		.header h1 {
-			color: #333;
-			font-size: 32px;
-			font-weight: normal;
+			margin-bottom: 60px;
 		}
 
 		.grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 20px;
-			max-width: 1200px;
-			margin: 0 auto;
+			gap: 30px;
 		}
 
 		.card {
 			background: #f8f9fa;
 			border: 1px solid #e9ecef;
-			padding: 30px;
+			padding: 40px;
 			color: #333;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			min-height: 200px;
+			text-align: center;
+			font-size: 24px;
+		}
+
+		h1 {
+			color: #333;
+			font-size: 32px;
+			font-weight: normal;
+			margin-bottom: 20px;
+		}
+
+		.subtitle {
+			color: #666;
 			font-size: 18px;
 		}
 
 		@media (max-width: 768px) {
-			body {
-				padding: 20px;
-			}
-			
 			.grid {
 				grid-template-columns: 1fr;
+			}
+			
+			.card {
+				padding: 30px;
 			}
 		}
 	</style>
 </head>
 <body>
-	<div class="header">
-		<h1>Projects</h1>
-	</div>
-	<div class="grid">
-		<div class="card">Card 1</div>
-		<div class="card">Card 2</div>
-		<div class="card">Card 3</div>
-		<div class="card">Card 4</div>
+	<div class="container">
+		<header class="header">
+			<h1>Card Grid</h1>
+			<div class="subtitle">Grid Subtitle</div>
+		</header>
+		
+		<div class="grid">
+			<div class="card">Card 1</div>
+			<div class="card">Card 2</div>
+			<div class="card">Card 3</div>
+			<div class="card">Card 4</div>
+		</div>
 	</div>
 </body>
 </html>

@@ -61,7 +61,7 @@ function createLibraryReadme(patterns) {
 
   return `# Layout Library
 
-A collection of responsive layout patterns and components.
+A collection of layout patterns and components.
 
 ## Available Layouts
 
@@ -129,7 +129,7 @@ async function main() {
   if (specificPattern) {
     if (patterns.includes(specificPattern)) {
       await processPattern(path.join(LIBRARY_DIR, specificPattern), force);
-      
+
       // Also regenerate library README when using force on specific pattern
       if (force) {
         console.log('\nUpdating library README...');
