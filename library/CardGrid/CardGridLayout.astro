@@ -1,0 +1,93 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="My website description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: system-ui, sans-serif;
+				background: white;
+				padding: 40px 20px;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.header {
+				text-align: center;
+				margin-bottom: 60px;
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 30px;
+			}
+
+			.card {
+				background: #f8f9fa;
+				border: 1px solid #e9ecef;
+				padding: 40px;
+				color: #333;
+				text-align: center;
+				font-size: 18px;
+			}
+
+			h1 {
+				color: #333;
+				font-size: 32px;
+				font-weight: normal;
+				margin-bottom: 20px;
+			}
+
+			.subtitle {
+				color: #666;
+				font-size: 18px;
+			}
+
+			@media (max-width: 768px) {
+				.grid {
+					grid-template-columns: 1fr;
+				}
+				
+				.card {
+					padding: 30px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<slot name="header">
+					<h1>Card Grid</h1>
+					<div class="subtitle">Grid Subtitle</div>
+				</slot>
+			</header>
+			
+			<div class="grid">
+				<slot>
+					<div class="card">Card 1</div>
+					<div class="card">Card 2</div>
+					<div class="card">Card 3</div>
+					<div class="card">Card 4</div>
+				</slot>
+			</div>
+		</div>
+	</body>
+</html>

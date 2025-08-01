@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Card Grid Layout</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+			background: white;
+			padding: 40px;
+		}
+
+		.header {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.header h1 {
+			color: #333;
+			font-size: 32px;
+			font-weight: normal;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.card {
+			background: #f8f9fa;
+			border: 1px solid #e9ecef;
+			padding: 30px;
+			color: #333;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 200px;
+			font-size: 18px;
+		}
+
+		@media (max-width: 768px) {
+			body {
+				padding: 20px;
+			}
+			
+			.grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Projects</h1>
+	</div>
+	<div class="grid">
+		<div class="card">Card 1</div>
+		<div class="card">Card 2</div>
+		<div class="card">Card 3</div>
+		<div class="card">Card 4</div>
+	</div>
+</body>
+</html>
