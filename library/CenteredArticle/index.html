@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Centered Article Layout</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+			min-height: 100vh;
+			background: white;
+			padding: 40px 20px;
+		}
+
+		.article-container {
+			max-width: 800px;
+			margin: 0 auto;
+			background: white;
+		}
+
+		.article-header {
+			text-align: center;
+			padding: 60px 0 40px;
+			border-bottom: 1px solid #e9ecef;
+			margin-bottom: 40px;
+		}
+
+		.article-content {
+			color: #333;
+			line-height: 1.8;
+			font-size: 24px;
+		}
+
+		h1 {
+			color: #333;
+			font-size: 32px;
+			font-weight: normal;
+			margin-bottom: 20px;
+		}
+
+		.subtitle {
+			color: #666;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<article class="article-container">
+		<header class="article-header">
+			<h1>Article Title</h1>
+			<div class="subtitle">Article Subtitle</div>
+		</header>
+		<div class="article-content">
+			Article Content
+		</div>
+	</article>
+</body>
+</html>
