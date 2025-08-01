@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Fixed Sidebar Layout</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+		}
+
+		.layout {
+			display: flex;
+			min-height: 100vh;
+		}
+
+		.sidebar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 200px;
+			height: 100vh;
+			background: #f8f9fa;
+			padding: 20px;
+			overflow-y: auto;
+			border-right: 1px solid #e9ecef;
+		}
+
+		.main-content {
+			margin-left: 200px;
+			flex: 1;
+			padding: 40px;
+			background: white;
+		}
+
+		.logo {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 30px;
+			color: #333;
+		}
+
+		.menu {
+			font-size: 18px;
+			margin-bottom: 20px;
+			color: #666;
+		}
+
+		.socials {
+			position: absolute;
+			bottom: 20px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+		}
+
+		.tall {
+			min-height: 400vh;
+			background: #f8f9fa;
+			padding: 20px;
+			margin-top: 20px;
+			border: 1px solid #e9ecef;
+			color: #333;
+		}
+
+		h1 {
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		p {
+			color: #666;
+			line-height: 1.6;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<aside class="sidebar">
+			<div class="logo">Logo</div>
+			<div class="menu">Menu Content</div>
+			<div class="socials">Socials</div>
+		</aside>
+		<main class="main-content">
+			<h1>Main Content</h1>
+			<p>This is the main content area. The sidebar remains fixed when you scroll.</p>
+
+			<div class="tall">
+				<p>Scroll down to see the fixed sidebar in action...</p>
+				<p>The sidebar stays fixed even when scrolling through long content.</p>
+				<p>Bottom of content area.</p>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
