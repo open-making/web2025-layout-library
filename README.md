@@ -1,6 +1,10 @@
 # web2025-layout-library
 
-Common layout patterns for you to use in your websites. This is to provide helpers for common, bare skeletons within which you can start adding your own designs and giving you some "starting" spaces. These are by no means fully-fleshed out websites or full designs, but only structural elements (divs, section) that you can use and insert things in. 
+Common layout patterns for you to use in your websites. This is to provide helpers for common, bare skeletons within which you can start adding your own designs and giving you some "starting" spaces. These are by no means fully-fleshed out websites or full designs, but only structural elements (divs, section) that you can use and insert things in.
+
+## Browse Available Layouts
+
+Check out the **[library/](library/)** folder to see all available layout patterns with previews and examples. 
 
 ## Requesting a layout
 

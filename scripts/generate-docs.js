@@ -56,7 +56,7 @@ function createMinimalReadme(patternName, imageName) {
 function createLibraryReadme(patterns) {
   const tableRows = patterns.map(pattern => {
     const imagePath = `${pattern}/screenshot.png`;
-    return `| ${pattern} | <img src="${imagePath}" alt="${pattern}" height="300"> |`;
+    return `| [${pattern}](${pattern}/) | <img src="${imagePath}" alt="${pattern}" height="300"> |`;
   }).join('\n');
 
   return `# Layout Library
@@ -129,6 +129,15 @@ async function main() {
   if (specificPattern) {
     if (patterns.includes(specificPattern)) {
       await processPattern(path.join(LIBRARY_DIR, specificPattern), force);
+      
+      // Also regenerate library README when using force on specific pattern
+      if (force) {
+        console.log('\nUpdating library README...');
+        const libraryReadmePath = path.join(LIBRARY_DIR, 'README.md');
+        const libraryReadmeContent = createLibraryReadme(patterns);
+        fs.writeFileSync(libraryReadmePath, libraryReadmeContent);
+        console.log('✓ Library README updated');
+      }
     } else {
       console.error(`Pattern "${specificPattern}" not found`);
       process.exit(1);

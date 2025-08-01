@@ -6,8 +6,8 @@ A collection of responsive layout patterns and components.
 
 | Layout | Preview |
 |--------|---------|
-| FixedSidebar | <img src="FixedSidebar/screenshot.png" alt="FixedSidebar" height="300"> |
-| HolyGrail | <img src="HolyGrail/screenshot.png" alt="HolyGrail" height="300"> |
+| [FixedSidebar](FixedSidebar/) | <img src="FixedSidebar/screenshot.png" alt="FixedSidebar" height="300"> |
+| [HolyGrail](HolyGrail/) | <img src="HolyGrail/screenshot.png" alt="HolyGrail" height="300"> |
 
 ## Usage
 
