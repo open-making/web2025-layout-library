@@ -1,6 +1,6 @@
 # Layout Library
 
-A collection of responsive layout patterns and components.
+A collection of layout patterns and components.
 
 ## Available Layouts
 
