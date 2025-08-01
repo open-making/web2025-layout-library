@@ -1,0 +1,14 @@
+{
+  "name": "layout-library",
+  "version": "1.0.0",
+  "description": "Layout library with automated screenshot generation",
+  "scripts": {
+    "generate-docs": "node scripts/generate-docs.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "dependencies": {
+    "playwright": "^1.54.1"
+  }
+}
