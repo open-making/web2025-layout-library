@@ -6,9 +6,9 @@
     "generate-docs": "node scripts/generate-docs.js"
   },
   "devDependencies": {
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^21.11.0"
   },
   "dependencies": {
-    "playwright": "^1.54.1"
+    "playwright": "^1.54.2"
   }
 }

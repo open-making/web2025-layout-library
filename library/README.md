@@ -11,6 +11,7 @@ A collection of layout patterns and components.
 | [FixedSidebar](FixedSidebar/) | <img src="FixedSidebar/screenshot.png" alt="FixedSidebar" height="300"> |
 | [HolyGrail](HolyGrail/) | <img src="HolyGrail/screenshot.png" alt="HolyGrail" height="300"> |
 | [SplitScreen](SplitScreen/) | <img src="SplitScreen/screenshot.png" alt="SplitScreen" height="300"> |
+| [StickySidebar](StickySidebar/) | <img src="StickySidebar/screenshot.png" alt="StickySidebar" height="300"> |
 
 ## Usage
 

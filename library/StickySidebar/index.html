@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sticky Sidebar Layout</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: system-ui, sans-serif;
+			background: white;
+		}
+
+		.container {
+			display: flex;
+			min-height: 100vh;
+			gap: 20px;
+			padding: 20px;
+		}
+
+		.main-content {
+			flex: 1;
+			background: #f8f9fa;
+			color: #333;
+			padding: 40px;
+			border: 1px solid #e9ecef;
+			min-height: 200vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24px;
+		}
+
+		.sidebar {
+			width: 300px;
+			background: #e9ecef;
+			color: #666;
+			padding: 40px;
+			border: 1px solid #dee2e6;
+			position: sticky;
+			top: 20px;
+			height: fit-content;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+		}
+
+		@media (max-width: 768px) {
+			.container {
+				flex-direction: column;
+			}
+			
+			.sidebar {
+				width: 100%;
+				position: static;
+				order: -1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<main class="main-content">
+			Main Content
+		</main>
+		<aside class="sidebar">
+			Sidebar
+		</aside>
+	</div>
+</body>
+</html>
